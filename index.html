@@ -1,38 +1,53 @@
-<!DOCTYPE html>
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-        <link rel="stylesheet" href="style.css">
+            <!--firebase-->
+            <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+        
+            <!--bootsrap-->
+            <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+            <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="blur_background"></div>
     <div class="header">
-        <span>
-        <button id="openTb_button">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        </span>
+        <ul>
+            <div class="left_header">
+                <li>
+                    <button id="openTb_button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                </li>
+                <li class="header_tabs"><a href="#"> <img src="logo.png" alt="logo" class="img-circle"> My Homes</a></li>
+                <li class="header_tabs sign_in"><a href="">sign in</a></li>
+                <li class="header_tabs sign_up"><a href="">sign up</a></li>
+            </div>
+
+            <div id="right_header" class="right_header">
+                <li class="header_tabs slogan">
+                    <a id="header_slogan">#No Broker No Commission</a>   
+                </li>
+            </div>
+         </ul>
+
     </div>
     <div id="tabs">
-        <div class="tab">
-            <a href="#">
-                <span>Tab1</span>
-                <span>&#129304;</span>
-            </a>
+        <div class="tab slogan_tab_con">
+            <span id="slogan_tab"></span>
         </div>
         <div class="tab">
             <a href="#">
@@ -72,16 +87,46 @@
         </div>
         <div class="tab">
             <a href="#">
+                <span>Tab2</span>
+                <span>&#128080;</span>
+            </a>
+        </div>
+        <div class="tab">
+            <a href="#">
                 <span>Tab4</span>
-                <span>&#128406;</span>
+                <span>&#128077;</span>
+            </a>
+        </div>
+        <div class="tab">
+            <a href="#">
+                <span>Tab 5</span>
+                <span>&#128077;</span>
             </a>
         </div>
     </div>
-    <div class="ele_container container">
-        <h4 class="btn btn-success">Hello World</h4>
-        <h4>asasa</h4>
-        <h1>ds</h1>
-    </div>
+        <div class="header_container">
+            <div class=" page_header">
+                <div class="branding">
+                        <h1 class="header_name">
+                            My Homes
+                        </h1>
+                        <h3 class="header_des">
+                            The most profitable investment on the land is land</h3>
+                </div>
+            </div> 
+            <hr>
+
+        </div>
+
+
+        <div class="ele_container container">
+            <div class="search_container">
+                <input type="text" placeholder="search">
+                <button class="search_button" onclick="search()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    
+
     <script src="script.js"></script>
 </body>
 </html>
