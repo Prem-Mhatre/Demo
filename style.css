@@ -135,9 +135,19 @@ li a{
 }
 .sign_in a, .sign_up a{
     border: 1px solid rgb(0, 153, 255);
+    background: rgb(0, 153, 255);
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     float: right;
+    color: white;
+
+}
+.sign_in a:hover{
+    background: white;
+    color: rgb(0, 153, 255);
+}
+.sign_up a:hover{
+    background: white;
     color: rgb(0, 153, 255);
 }
 .sign_in, .sign_up{
